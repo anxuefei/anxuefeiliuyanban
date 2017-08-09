@@ -19,7 +19,7 @@ class Home extends Tishi{
         if(IS_POST){
             $this->arr[]=$_POST;
             $this->shangchuan();
-            $this->xianshi('留言成功','header.php');
+            $this->xianshi('留言成功','index.php');
         }
         include './liuyan/tianjia.php';
 
@@ -29,7 +29,7 @@ class Home extends Tishi{
 //        点击删除按钮是删除对应下标的内容，完事将新的内容传回数据库，弹出提示信息
         unset($this->arr[$_GET['b']]);
         $this->shangchuan();
-        $this->xianshi('删除成功','header.php');
+        $this->xianshi('删除成功','index.php');
     }
 //    创建一个修改方法，每次点击编辑按钮时执行这个方法
     public function xiugai(){
@@ -37,7 +37,7 @@ class Home extends Tishi{
         if(IS_POST){
             $this->arr[$_GET['b']]=$_POST;
             $this->shangchuan();
-            $this->xianshi('修改成功','header.php');
+            $this->xianshi('修改成功','index.php');
         }
         include './liuyan/xiugai.php';
     }
